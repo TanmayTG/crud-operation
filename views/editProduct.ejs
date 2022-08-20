@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div id="A">
+    <section id="ACat">
+        <h1 id="Cat">EDIT Product (<%= Products.ProductName %>)</h1>
+        <form action="/updateProduct/<%= Products._id %>" method="post">
+            <h3 class="a">ProductName</h3>
+            <input type="text" class="a" name="ProductName" value="<%= Products.ProductName %>" required>
+            <h3 class="a">CatagoryName</h3>
+            <input type="text" class="a" name="catagoryName" value="<%= Products.catagoryName %>" required>
+            <button id="btn" name="submit" value="update product">Insert</button>
+        </form>
+      </section>
+    </div>
+</body>
+</html>

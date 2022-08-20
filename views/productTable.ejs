@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <div id="MainCat">
+    <section id="Clist">
+      <h1 id="List">Product List</h1>
+        <table>
+          <thead>
+              <tr>
+                  <th class="a1">ProductID</th>
+                  <th class="a1">ProductName</th>
+                  <th class="a1">CatagoryName</th>
+                  <th class="a1">Edit</th>
+                  <th class="a1">Delete</th>
+              </tr>
+          </thead>
+          <tbody>
+            <% Products.forEach((row,index)=> { %>
+            <tr>
+              <td class="a1"><%= index %></td>
+              <td class="a1"><%= row.ProductName %></td>
+              <td class="a1"><%= row.catagoryName %></td>
+              <td class="a1"><a href="/editProduct/<%= row._id %>">Edit</a></td>
+              <td class="a1"><a href="/deleteProduct/<%= row._id %>">Delete</a></td>
+            </tr>
+            <% }) %>
+        </tbody> 
+        </table>
+      </section>
+    </div>
+    <div class="prev">
+      <button id="add"><a href="/add" class="style">Add User</a></button>
+    </div>
+    <div class="but">
+      <input type="text" name="page">
+      <button id="b" type="submit">search</button>
+    </div>
+</body>
+</html>
